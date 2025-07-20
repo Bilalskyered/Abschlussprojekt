@@ -48,7 +48,6 @@ Der gesamte Ablauf ist über Jenkins automatisiert:
 Gezeigt werden:
 - Live-Durchlauf der Jenkins-Pipeline
 - Übersicht über die Kubernetes-Ressourcen (`kubectl get pods` / `svc`)
-- Screenshots der einzelnen Schritte
 
 ---
 
