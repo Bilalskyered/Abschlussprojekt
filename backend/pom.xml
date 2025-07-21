@@ -1,46 +1,46 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+  
+  <modelVersion>4.0.0</modelVersion> <!-- Maven-Modellversion -->
 
-  <groupId>com.kukuk</groupId>
-  <artifactId>app</artifactId>
-  <version>1.0.0</version>
+  <groupId>com.kukuk</groupId>       <!-- Gruppen-ID des Projekts -->
+  <artifactId>app</artifactId>       <!-- Projektname -->
+  <version>1.0.0</version>           <!-- Projektversion -->
 
-  <profiles>
+  <profiles> <!-- Verschiedene Konfigurationsprofile -->
     <profile>
-      <id>dev</id>
+      <id>dev</id> <!-- Entwicklungsprofil -->
       <properties>
-        <spring.profiles.active>dev</spring.profiles.active>
+        <spring.profiles.active>dev</spring.profiles.active> <!-- Aktiviert Spring-Profil "dev" -->
       </properties>
     </profile>
     <profile>
-      <id>prod</id>
+      <id>prod</id> <!-- Produktionsprofil -->
       <properties>
-        <spring.profiles.active>prod</spring.profiles.active>
+        <spring.profiles.active>prod</spring.profiles.active> <!-- Aktiviert Spring-Profil "prod" -->
       </properties>
     </profile>
   </profiles>
 
-  <dependencies>
-  <dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter</artifactId>
-    <version>5.9.3</version>
-    <scope>test</scope>
-  </dependency>
-</dependencies>
+  <dependencies> <!-- Abhängigkeiten für das Projekt -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>         <!-- JUnit 5 für Tests -->
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.9.3</version>
+      <scope>test</scope>                          <!-- Nur für Tests verfügbar -->
+    </dependency>
+  </dependencies>
 
-
-  <build>
+  <build> <!-- Einstellungen für den Build-Prozess -->
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version> 
+        <version>3.8.1</version> <!-- Version des Compiler-Plugins -->
         <configuration>
-          <source>11</source> 
-          <target>11</target>
+          <source>11</source>   <!-- Quellcode-Version: Java 11 -->
+          <target>11</target>   <!-- Ziel-Version: Java 11 -->
         </configuration>
       </plugin>
     </plugins>
